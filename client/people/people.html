@@ -1,0 +1,34 @@
+<template name="people">
+ <!--the navigation-->   
+  <div class="navbar-fixed">
+    <nav class="blue-grey darken-3">
+      <div class="nav-wrapper">
+          
+        <a href="{{pathFor route="home"}}"><i class="material-icons left">arrow_back</i></a>
+        <a href="{{pathFor route="searchpeople"}}"><i class="material-icons right">search</i></a>
+        
+      </div>
+    </nav>
+  </div>
+  <!--people template-->
+  
+  <div class="heighty">
+    <div class="row">
+      {{#each profiles}}
+                <div class="col s12 m6">
+                <div class="card blue-grey darken-4">
+                  <div class="card-content white-text">
+                    <span class="card-title">{{name}}</span>
+                      <i class="material-icons right">people</i>
+                    <p class="truncate">{{status}}</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="{{pathFor route="peopledetails"}}">View Full</a>
+                  </div>
+                </div>
+              </div>
+      {{/each}}
+    </div>  
+  </div>
+  
+</template>

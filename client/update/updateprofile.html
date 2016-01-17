@@ -1,0 +1,25 @@
+<template name="updateprofile">
+    <!--the navigation-->
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper brown">
+        <a href="{{pathFor route="mine"}}" class="left"><i class="material-icons">arrow_back</i></a>
+      </div>
+    </nav>
+  </div>
+  
+  <!--the form filled-->
+  {{#autoForm collection="Profiles" id="add-details-form" type="update" doc=this}}
+  
+  {{> afQuickField name="name"}}
+  {{> afQuickField name="status" type="textarea"}}
+  {{> afQuickField name='tel'}}
+  {{> afQuickField name='email'}}
+  {{> afQuickField name='projects'}}
+  
+  <button class="btn waves-effect waves-light updateprofile" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+  </button>
+  
+  {{/autoForm}}
+</template>

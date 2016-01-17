@@ -1,0 +1,26 @@
+<template name="updatejob">
+        <!--the navigation-->
+ <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper brown">
+        <a href="{{pathFor route="mine"}}" class="left"><i class="material-icons">arrow_back</i></a>
+      </div>
+    </nav>
+  </div>
+  
+    <!--the form filled-->
+ {{#autoForm collection="Jobs" id="jobs-create" type="update" doc=this}}
+  
+  {{> afQuickField name="name"}}
+  {{> afQuickField name='tel'}}
+  {{> afQuickField name='email'}}
+  {{> afQuickField name='the_work'}}
+  {{> afQuickField name="tags"}}
+  {{> afQuickField name='requirements'}}
+  
+  <button class="btn waves-effect waves-light updatejob" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+  </button>
+  
+  {{/autoForm}}
+</template>

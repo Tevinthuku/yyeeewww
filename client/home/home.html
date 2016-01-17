@@ -1,0 +1,67 @@
+<template name="home">
+    <!--the background desktop-->
+<div id="bg" class="hide-on-med-and-down">
+  <img src="/home/homedesktop.jpg" alt="">
+</div>
+
+<!--the tablet background-->
+<div id="bg" class="hide-on-large-only hide-on-small-only">
+  <img src="/home/hometablet.jpg" alt="">
+</div>
+
+<!--the phone background-->
+<div id="bg" class="hide-on-med-and-up">
+  <img src="/home/homephone.jpg" alt="">
+</div>
+
+<!--the home page title-->
+<h6 class="white-text center-align hometitle">Home Page</h6>
+<!--the loader-->
+<a href="{{pathFor route="main"}}">
+<div class="row">
+<div class="sk-folding-cube">
+  <div class="sk-cube1 sk-cube"></div>
+  <div class="sk-cube2 sk-cube"></div>
+  <div class="sk-cube4 sk-cube"></div>
+  <div class="sk-cube3 sk-cube"></div>
+</div>   
+</div>  
+</a>
+
+
+<!--desktop links-->
+<div class="row hide-on-med-and-down desktopanchor">
+  {{#animate type="zoomIn"}}
+    <div class="col desktoplinks s6 m4 l6 white-text waves-effect waves-light people">People</div>
+  {{/animate}} 
+  
+  {{#animate type="zoomIn"}}
+    <div class="col desktoplinks s6 m4 l6 white-text waves-effect waves-light jobs">Jobs</div>
+  {{/animate}}  
+</div>
+
+<!--tablet links-->
+<div class="row hide-on-large-only hide-on-small-only tabletanchor">
+  {{#animate type="zoomIn"}}
+    <div class="col desktoplinks s6 m6 white-text waves-effect waves-light people">People</div>
+  {{/animate}}
+  
+  {{#animate type="zoomIn"}}
+    <div class="col desktoplinks s6 m6 white-text waves-effect waves-light jobs">Jobs</div>
+  {{/animate}}  
+</div>
+
+<!--mobile links-->
+<div class="row hide-on-med-and-up mobileanchor">
+    
+  {{#animate type="fadeInLeftBig"}}
+    <div class="col mobilelinks s12 left-align"><a class="waves-effect waves-light btn-flat  white-text" href="{{pathFor route="people"}}">People</a></div>
+  {{/animate}} 
+    {{#animate type="fadeInLeftBig"}}
+    <div class="col mobilelinks s12 left-align"><a class="waves-effect waves-light btn-flat  white-text" href="{{pathFor route="jobs"}}">JObs</a></div>
+  {{/animate}}
+
+
+  
+</div>
+</template>

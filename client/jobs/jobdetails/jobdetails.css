@@ -1,0 +1,11 @@
+    .parallax-container {
+      height: 250px;
+    }
+    .jobtitle{
+        position:absolute;
+        top:200px;
+        font-size:30px;
+    }
+    .jobdetailsback{
+        position:absolute;
+    }

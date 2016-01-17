@@ -1,0 +1,99 @@
+<template name="main">
+    <!--the background desktop-->
+<div id="bg" class="hide-on-med-and-down">
+  <img src="/desktop.jpg" alt="">
+</div>
+
+<!--the tablet background-->
+<div id="bg" class="hide-on-large-only hide-on-small-only">
+  <img src="/tablet.jpg" alt="">
+</div>
+
+<!--the phone background-->
+<div id="bg" class="hide-on-med-and-up">
+  <img src="/phone.jpg" alt="">
+</div>
+
+<!--the main title-->
+
+<h6 class="white-text center-align">Main Page</h6>
+
+
+<!--the loader-->
+<div class="row">
+ <div class="sk-folding-cube">
+  <div class="sk-cube1 sk-cube"></div>
+  <div class="sk-cube2 sk-cube"></div>
+  <div class="sk-cube4 sk-cube"></div>
+  <div class="sk-cube3 sk-cube"></div>
+</div>   
+</div>
+
+
+
+<!--desktop links-->
+<div class="row hide-on-med-and-down desktopanchor">
+    <div class="col desktoplinks s6 m4 l3 white-text waves-effect waves-light home">Home</div>
+    <div class="col desktoplinks s6 m4 l3 white-text waves-effect waves-light create">Create</div>
+    <div class="col desktoplinks s6 m4 l3 white-text waves-effect waves-light">Update</div>
+    
+    {{#if currentUser}} 
+    <div class="col desktoplinks logout s6 m4 l3 white-text waves-effect waves-light">Log Out</div>
+    {{else}} 
+    <div class="col desktoplinks s6 m4 l3 white-text waves-effect waves-light login">LogIn</div>
+    {{/if}}
+    
+    
+</div>
+
+<!--tablet links-->
+<div class="row hide-on-large-only hide-on-small-only tabletanchor">
+
+    <div class="col desktoplinks s6 m6 white-text waves-effect waves-light home">Home</div>
+    <div class="col desktoplinks s6 m6 white-text waves-effect waves-light create">Create</div>
+    <div class="col desktoplinks s6 m6 white-text waves-effect waves-light update">Update</div>
+
+    {{#if currentUser}}
+    <div class="col desktoplinks logout s6 m6 white-text waves-effect waves-light">Log Out</div>
+    {{else}}
+    <div class="col desktoplinks s6 m6 white-text waves-effect waves-light login">Log In</div>
+    {{/if}}
+    
+</div>
+
+
+<!--mobile links-->
+<div class="row hide-on-med-and-up mobileanchor">
+    
+  {{#animate type="fadeInLeftBig"}}
+    <div class="col mobilelinks s12 left-align"><a class="waves-effect waves-light btn-flat  white-text" href="{{pathFor route="home"}}">Home</a></div>
+  {{/animate}} 
+  
+  {{#animate type="fadeInLeftBig"}}
+    <div class="col mobilelinks s12 left-align"><a class="waves-effect waves-light btn-flat  white-text" href="{{pathFor route="create"}}">Create</a></div>
+  {{/animate}}
+  
+  {{#animate type="fadeInLeftBig"}}
+    <div class="col mobilelinks s12 left-align"><a class="waves-effect waves-light btn-flat  white-text" href="{{pathFor route ="mine"}}">Update</a></div>
+  {{/animate}}
+  
+  
+  {{#if currentUser}}
+  
+  {{#animate type="fadeInLeftBig"}}
+    <div class="col mobilelinks s12 left-align"><a class="waves-effect waves-light logout btn-flat  white-text">Log Out</a></div>
+  {{/animate}}
+  
+  {{else}}
+ {{#animate type="fadeInLeftBig"}}  
+   <div class="col mobilelinks s12 left-align"><a class="waves-effect waves-light btn-flat  white-text" href="{{pathFor route="login"}}">Log In</a></div>
+  {{/animate}}   
+  {{/if}}
+  
+  {{#animate type="fadeInLeftBig"}}
+    <div class="col mobilelinks s12 left-align"><a class="waves-effect waves-light btn-flat  white-text" href="{{pathFor route="about"}}">About</a></div>
+  {{/animate}}
+  
+</div>
+
+</template>

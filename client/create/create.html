@@ -1,0 +1,81 @@
+<template name="create">
+<!--the home page title-->
+<h6 class="white-text center-align hometitle">Create Page</h6>
+
+<div class="spinner">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+</div>
+
+
+<!--the background desktop-->
+<div id="bg" class="hide-on-med-and-down">
+  <img src="/home/homedesktop.jpg" alt="">
+</div>
+
+<!--the tablet background-->
+<div id="bg" class="hide-on-large-only hide-on-small-only">
+  <img src="/home/hometablet.jpg" alt="">
+</div>
+
+<!--the phone background-->
+<div id="bg" class="hide-on-med-and-up">
+  <img src="/home/homephone.jpg" alt="">
+</div>
+
+<!--desktop links-->
+<div class="row hide-on-med-and-down desktopanchor">
+  {{#animate type="zoomIn"}}
+    <div class="col desktoplinks s6 m4 l4 white-text waves-effect waves-light profile">Profile</div>
+  {{/animate}}
+  
+  {{#animate type="zoomIn"}}
+    <div class="col desktoplinks s6 m4 l4 white-text waves-effect waves-light job">Job</div>
+  {{/animate}}
+  
+  {{#animate type="zoomIn"}}
+    <div class="col desktoplinks s6 m4 l4 white-text waves-effect waves-light update">Update</div>
+  {{/animate}}  
+</div>
+
+<!--tablet links-->
+<div class="row hide-on-large-only hide-on-small-only tabletanchor">
+  
+  {{#animate type="zoomIn"}}
+    <div class="col desktoplinks s6 m4 white-text waves-effect waves-light profile">Profile</div>
+  {{/animate}}
+  
+  {{#animate type="zoomIn"}}
+    <div class="col desktoplinks s6 m4 white-text waves-effect waves-light job">Job</div>
+  {{/animate}}
+  
+  {{#animate type="zoomIn"}}
+    <div class="col desktoplinks s6 m4 white-text waves-effect waves-light update">Update</div>
+  {{/animate}}  
+  
+    
+</div>
+
+<!--mobile links-->
+<div class="row hide-on-med-and-up mobileanchor">
+    
+  {{#animate type="fadeInLeftBig"}}
+    <div class="col mobilelinks s12 left-align"><a class="waves-effect waves-light btn-flat  white-text" href="{{pathFor route="profile"}}">Profile</a></div>
+  {{/animate}} 
+  
+  {{#animate type="fadeInLeftBig"}}
+    <div class="col mobilelinks s12 left-align"><a class="waves-effect waves-light btn-flat  white-text" href="{{pathFor route="job"}}">Job</a></div>
+  {{/animate}}
+
+  
+  {{#animate type="fadeInLeftBig"}}
+    <div class="col mobilelinks s12 left-align"><a class="waves-effect waves-light btn-flat  white-text" href="{{pathFor route="mine"}}">Update</a></div>
+  {{/animate}}
+
+  
+</div>
+
+</template>

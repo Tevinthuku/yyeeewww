@@ -1,0 +1,32 @@
+<template name="login">
+{{#if currentUser}}
+  
+  {{> home}}
+  
+  
+{{else}}
+
+    <!--the background desktop-->
+      <div id="log" class="hide-on-med-and-down">
+        <img src="/extra/profiledesktop.jpg" alt="">
+      </div>
+      
+      <!--the tablet background-->
+      <div id="log" class="hide-on-large-only hide-on-small-only">
+        <img src="/extra/profiletablet.jpg" alt="">
+      </div>
+      <!--the phone background-->
+      <div id="log" class="hide-on-med-and-up">
+        <img src="/extra/profilephone.jpg" alt="">
+      </div>
+      
+      
+          
+      <div class="formfill">
+          {{> atForm}}    
+      </div>
+
+{{/if}}
+    
+
+</template>

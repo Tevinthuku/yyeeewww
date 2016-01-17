@@ -1,0 +1,78 @@
+<template name="jobdetails">
+  <div class="navbar-fixed">
+    <nav class="amber lighten-3">
+      <div class="nav-wrapper">
+        <a href="{{pathFor route="jobs"}}"><i class="small material-icons white-text left">arrow_back</i></a>
+      </div>
+    </nav>
+  </div>
+
+<!--the desktop background-->
+<div class="hide-on-med-and-down">
+   <div class="parallax-container">
+     <div class="parallax"><img src="/jobs/desktopjobs.jpg"></div>
+  </div>   
+</div>
+<!--the tablet background-->
+<div class="hide-on-large-only hide-on-small-only">
+   <div class="parallax-container">
+     <div class="parallax"><img src="/jobs/tabletjobs.jpg"></div>
+  </div>   
+</div>
+
+<!--the phone background-->
+<div class="hide-on-med-and-up">
+   <div class="parallax-container">
+     <div class="parallax"><img src="/jobs/phonejobs.jpg"></div>
+    
+  </div>   
+</div>
+
+<!--the project title-->
+<h6 class="jobtitle white-text">{{name}}</h6>
+
+  <div class="section white">
+    <div class="row container">
+      <h4 class="header">The Project Descrition</h4>
+      <p class="grey-text text-darken-3 lighten-3">{{the_work}}</p>
+      
+      <!--the telephone number-->
+        <div class="col s12 m6 l4">
+          <div class="card yellow darken-3">
+            <div class="card-content white-text">
+              <span class="card-title">Telephone</span>
+               <i class="material-icons right">call</i>
+              <p>{{tel}}</p>
+            </div>
+          </div>
+        </div>
+      <!---the email-->  
+       <div class="col s12 m6 l4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Email Address</span>
+                <i class="material-icons right">email</i>
+              <p>{{email}}</p>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="row container">
+          <!--the requirements-->
+          <h4 class="header">The Project Requirements</h4>
+    {{#each requirements}}
+        <div class="col s12 m6 l4">
+          <div class="card grey darken-4">
+            <div class="card-content white-text">
+              <span class="card-title">{{title}}</span>
+              <i class="material-icons right">description</i>
+              <p>{{desc}}</p>
+            </div>
+          </div>
+        </div>
+    {{/each}}
+    </div>
+  </div>
+
+</template>
